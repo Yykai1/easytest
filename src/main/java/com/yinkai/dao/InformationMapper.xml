@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace绑定一个对应的Mapper接口-->
+<mapper namespace="com.yinkai.dao.InformationMapper">
+    <!--查询语句-->
+    <!--id和Mapper里面的定义的接口相同-->
+    <select id="getInformationLike" resultType="com.yinkai.entity.Information">
+        select * from jdbc.information where area like #{value}
+    </select>
+
+    <select id="getInformation" resultType="com.yinkai.entity.Information">
+        select * from jdbc.information
+    </select>
+</mapper>
